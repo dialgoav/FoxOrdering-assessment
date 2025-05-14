@@ -1,0 +1,63 @@
+@use 'home' as *;
+@use 'movies' as *;
+@use 'catalog' as *;
+@use 'words' as *;
+
+:root{
+    //Colors
+    --white:#F4F4ED;
+    --black: #1d1d1f;
+    --dark-white:#F5F1E3;
+    --platinum:#D9D9D9;
+    --grey:#9DA9A0;
+    --dark-grey:#506C64;
+    --light-blue:#A9BCD0;
+    --blue:#7CDEDC;
+    --dark-blue:#677CE7;
+    --light-purple:#F6E4F6;
+    --dark-purple: #533677;
+    --light-pink: #F4D8CD;
+    --pink:#EC5F9B;
+    --dark-pink: #d25578;
+    --tangerine:#F1AB86;
+    --peach:#F7DBA7;
+    --green:#065143;
+    --dark-green:#223127;
+
+    //Gradients
+    --gradient-purple: linear-gradient(to right, #677CE7 , #533677);
+    --gradient-blue: linear-gradient(to right, #C2DFE3 , #677CE7);
+    --gradient-pink: linear-gradient(to right, #f177ac , #d25578);
+    --gradient-grey: linear-gradient(to right, #D9D9D9 , #9DA9A0);
+
+    --text-color: var(--white);
+    --icon-color: var(--white);
+    --icon-hover-color: var(--pink);
+}
+
+body{
+    font-family: system-ui;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    //max-width: 1200px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
