@@ -16,12 +16,7 @@ function useSearch(){
     }
 
     if (search === ''){
-      setError('Empty movie')
-      return
-    }
-
-    if (search.length < 3){
-      setError('Must writte at least 5 characters')
+      setError('No se ha indicado el nombre de una película')
       return
     }
 
@@ -43,9 +38,6 @@ const debauncedGetMovies = useCallback(
   , [getMovies]
 )
 
-
-
-
 const handleSubmit = (event) => {
   event.preventDefault()
   getMovies({search})
@@ -55,7 +47,6 @@ const handleChange = (event) => {
   const newSearch = event.target.value
   updateSearch(newSearch)
   debauncedGetMovies(newSearch)
-
 }
 
 const handleSort = () => {
@@ -64,21 +55,18 @@ const handleSort = () => {
 
   return (
     <>
-      <div className="page">
+      <div className="movies">
 
         <header>
-        <h1>Movies App</h1>
-          <form className="form" onSubmit={handleSubmit}>
-            <input
-            style={ {
-              border:'1px solid transparent',
-              borderColor: error ? 'red': 'transparent'
-            }} onChange={handleChange} value={search} name="query" placeholder='Harry Potter, Avengers, Star Wars...'/>
+          <h1>Movies App</h1>
+          <form className="movies__form" onSubmit={handleSubmit}>
+            <input onChange={handleChange} value={search} name="query" placeholder='Harry Potter, Avengers, Star Wars...'/>
             <input type="checkbox" onChange={handleSort} checked={sort} />
             <button type="submit">Buscar</button>
           </form>
           {error && <p style={{color:'red'}}>{error} </p> }
         </header>
+
         <main>
           {loading ? <p>Cargando...</p> : <Movies movies={movies} />}
         </main>

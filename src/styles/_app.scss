@@ -1,7 +1,8 @@
 @use 'home' as *;
 @use 'movies' as *;
-@use 'catalog' as *;
 @use 'words' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 :root{
     //Colors
@@ -12,8 +13,7 @@
     --grey:#9DA9A0;
     --dark-grey:#506C64;
     --light-blue:#A9BCD0;
-    --blue:#7CDEDC;
-    --dark-blue:#677CE7;
+    --blue:#677CE7;
     --light-purple:#F6E4F6;
     --dark-purple: #533677;
     --light-pink: #F4D8CD;
@@ -36,16 +36,13 @@
 }
 
 body{
-    font-family: system-ui;
+    font-family: "Questrial", sans-serif;
 }
 
-.page{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    //max-width: 1200px;
+h1{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 main{
@@ -54,10 +51,6 @@ main{
     width: 100%;
 }
 
-form{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+
 
 

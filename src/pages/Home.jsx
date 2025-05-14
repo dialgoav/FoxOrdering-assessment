@@ -20,32 +20,31 @@ const Home = () => {
               >
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-                        <a
-                            href="https://www.linkedin.com/in/diana-gomez-avendano/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn"
-                            className="home__icon"
-                        >
-                        <FontAwesomeIcon icon={faLinkedin} />
-                        </a>
-                        <a
-                            href="https://x.com/dialgoav9"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Twitter"
-                            className="home__icon"
-                        >
-                        <FontAwesomeIcon icon={faTwitter} />
-                        </a>
-                </div>            
+              <a
+                href="https://www.linkedin.com/in/diana-gomez-avendano/"
+                target="_blank"
+                aria-label="LinkedIn"
+                className="home__icon"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a
+                href="https://x.com/dialgoav9"
+                target="_blank"
+                aria-label="Twitter"
+                className="home__icon"
+              >
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+            </div>            
           </div>
         </section>
+
         <section className="home__row home__row--two">
-          <Link to="/movies" className="home__item">
+          <Link to="/movies" className="home__item item-button">
             Catálogo de películas
           </Link>
-          <Link to="/words" className="home__item">
+          <Link to="/words" className="home__item item-button">
             El removedor de vocales
           </Link>
         </section>

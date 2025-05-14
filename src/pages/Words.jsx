@@ -9,7 +9,7 @@ function Words() {
 
     return (
         <div className="remove-vowels">
-        <h2 className="remove-vowels__title">El removedor de vocales 3000 </h2>
+        <h1 className="remove-vowels__title">El removedor de vocales 3000 </h1>
 
         <label htmlFor="remove-vowels-input" className="remove-vowels__label">
             Ingresa un texto
@@ -21,11 +21,14 @@ function Words() {
             onChange={(e) => setText(e.target.value)}
             placeholder="Aquí va tu texto..."
             className="remove-vowels__input"
-            aria-describedby="output"
         />
 
         <p id="output" className="remove-vowels__result">
-            <strong>Después de la magia tu texto se ve así:</strong> {removeVowels(text)}
+            <strong>Después de la magia tu texto se ve así:</strong> 
+            <div>
+                {removeVowels(text)}
+            </div>
+            
         </p>
         </div>
     );

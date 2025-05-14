@@ -9,7 +9,7 @@ export const searchMovies = async ({search}) => {
         const movies = json.Search
 
         return movies?.map(movie => ({
-            id: movie.imbID,
+            id: movie.imdbID,
             title: movie.Title,
             year: movie.Year,
             type: movie.Type,
@@ -17,6 +17,6 @@ export const searchMovies = async ({search}) => {
         }))
         
     } catch (e) {
-        throw new Error('Error searching movies')
+        throw new Error('Error buscando películas')
     }  
 }

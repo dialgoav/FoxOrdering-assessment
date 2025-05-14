@@ -65,6 +65,14 @@
     }
   }
 
+  .item-button{
+    background-color: var(--pink);
+
+    &:hover {
+      background-color: var(--blue);
+    }
+
+  }
 }
 
 @media (max-width: 768px) {
@@ -72,15 +80,19 @@
     gap: 3rem;
     padding: 2rem;
     height: auto;
-  }
 
-  .home__row {
-    flex-direction: column;
+    &__row {
+      flex-direction: column;
 
-    .home__item {
-      flex: 1 1 auto;
-      width: 100%;
-      height: auto;
+      &--two {
+        margin-top: 3rem;
+      }
+
+      &__item {
+        flex: 1 1 auto;
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

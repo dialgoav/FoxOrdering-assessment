@@ -2,13 +2,12 @@
 export function ListOfMovies({movies}) {
 
     return (
-        <ul className="catalog">
+        <ul className="movies__catalog">
         {
             movies.map(movie => (
-            <li className="movies" key={movie.id} >
+            <li className="movies__catalog__list" key={movie.id} >
                 <h3>{movie.title} </h3>
                 <p>{movie.year} </p>
-                <p>{movie.type} </p>
                 <img src={movie.poster} alt={movie.title} />
             </li>
         
@@ -17,7 +16,6 @@ export function ListOfMovies({movies}) {
         </ul>
     )
 }
-
 
 export function NoMoviesResult () {
 
@@ -30,7 +28,6 @@ export function Movies ({movies}) {
 
     const hasMovies = movies?.length >0
 
-    
     return (
         hasMovies 
         ? <ListOfMovies movies={movies}/>
