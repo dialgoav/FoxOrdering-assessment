@@ -61,8 +61,8 @@ const handleSort = () => {
           <h1>Movies App</h1>
           <form className="movies__form" onSubmit={handleSubmit}>
             <input onChange={handleChange} value={search} name="query" placeholder='Harry Potter, Avengers, Star Wars...'/>
-            <input type="checkbox" onChange={handleSort} checked={sort} />
-            <button type="submit">Buscar</button>
+            <input className="movies__form__check" type="checkbox" onChange={handleSort} checked={sort} />
+            <button className="movies__form__button" type="submit">Buscar</button>
           </form>
           {error && <p style={{color:'red'}}>{error} </p> }
         </header>

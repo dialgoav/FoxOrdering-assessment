@@ -28,11 +28,32 @@
     }
 
     &__form{
+        width: 100%;
         padding: 2rem;
-        
+        gap: 1rem;
+        justify-content: space-around;
+
         input{
+            padding: 0.5rem 1rem;
             border-color: var(--black) ;
             border-radius: 5px;
+        }
+
+        &__button{
+            color: var(--white);
+            background-color: var(--dark-purple);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            border-color: none;
+            cursor: pointer;
+
+            &:hover {
+            background-color: var(--pink);
+            }
+        }
+
+        &__check{
+            padding: 2rem;
         }
     }
 
