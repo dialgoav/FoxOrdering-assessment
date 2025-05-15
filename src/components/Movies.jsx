@@ -20,7 +20,7 @@ export function ListOfMovies({movies}) {
 export function NoMoviesResult () {
 
     return (
-        <p>No se encontró la película</p>
+        <p>Ingrese el nombre de la película que desea buscar</p>
     )
 }
 
